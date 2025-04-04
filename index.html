@@ -14,19 +14,19 @@
     }
 
     body {
-      font-family: "Georgia", serif;
-      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      background-color: #000; /* Solid Black Background */
       color: white;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       height: 100vh;
       text-align: center;
       padding: 0 20px;
     }
 
+    /* Main Container */
     .container {
       max-width: 900px;
       width: 100%;
@@ -37,18 +37,12 @@
     .brand-name {
       font-size: 6em;
       font-weight: 800;
-      color: #FFD700;
+      color: #FFD700; /* Luxurious Gold */
       letter-spacing: 5px;
       text-transform: uppercase;
       margin-bottom: 20px;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.7); /* Glowing effect */
       animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .brand-name .number {
-      display: inline-block;
-      width: 1em;
-      text-align: center;
     }
 
     .subtitle {
@@ -67,18 +61,20 @@
       padding: 20px 30px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      color: #FFD700;
+      color: #FFD700; /* Gold countdown text */
       animation: fadeIn 1.5s ease-in-out 1s;
     }
 
+    /* Countdown Animation */
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
+    /* Footer */
     .footer {
-      margin-top: auto;
-      padding: 20px 0;
+      position: absolute;
+      bottom: 20px;
       font-size: 1.2em;
       color: #bbb;
       letter-spacing: 1px;
@@ -86,6 +82,7 @@
       font-weight: 300;
     }
 
+    /* Media Queries for Mobile Responsiveness */
     @media (max-width: 768px) {
       .brand-name {
         font-size: 5em;
@@ -132,7 +129,7 @@
 <body>
 
 <div class="container">
-  <div class="brand-name">Lucid <span class="number">8</span></div>
+  <div class="brand-name">Lucid 8</div>
   <div class="subtitle">We’re building something extraordinary for you. Stay tuned!</div>
   <div class="countdown" id="countdown">
     Launching in: <span id="countdown-timer"></span>
@@ -147,7 +144,7 @@
   // Countdown Timer
   const countdownDate = new Date("May 1, 2025 00:00:00").getTime();
 
-  const countdownTimer = setInterval(function () {
+  const countdownTimer = setInterval(function() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
