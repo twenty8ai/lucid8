@@ -115,25 +115,9 @@
             text-transform: uppercase;
         }
 
-        /* Button */
+        /* Refined Button Style (Remove Notify Me Button) */
         .cta-button {
-            background: linear-gradient(45deg, #FFD700, #FFAA00); /* Gold gradient for prestige */
-            color: black;
-            font-size: 1.4em;
-            padding: 18px 35px;
-            border: none;
-            border-radius: 8px;
-            margin-top: 30px;
-            cursor: pointer;
-            font-family: 'Cinzel', serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(45deg, #FFAA00, #FFD700);
-            transform: translateY(-4px); /* Slight elevation on hover */
+            display: none; /* Removed the button */
         }
 
         /* Media Queries for Mobile Responsiveness */
@@ -156,11 +140,6 @@
             .footer {
                 font-size: 1em;
             }
-
-            .cta-button {
-                font-size: 1.2em;
-                padding: 15px 30px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -182,11 +161,6 @@
             .footer {
                 font-size: 0.9em;
             }
-
-            .cta-button {
-                font-size: 1.1em;
-                padding: 12px 25px;
-            }
         }
     </style>
 </head>
@@ -200,7 +174,6 @@
     <div class="countdown" id="countdown">
         Launching in: <span id="countdown-timer"></span>
     </div>
-    <button class="cta-button">Notify Me</button> <!-- Call to action button -->
 </div>
 
 <div class="footer">
